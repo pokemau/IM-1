@@ -1,8 +1,7 @@
 <?php
-  $connection = new mysqli('localhost', 'root','','dbtañecaf2');
+  $connection = new mysqli('localhost', 'root','','dbtanecaf2');
 
   if (!$connection) {
     die (mysqli_error($mysqli));
   }
-
 ?>
