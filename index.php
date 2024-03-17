@@ -1,13 +1,13 @@
 <?php
-  include 'connect.php';
+include 'connect.php';
 
-  require_once 'includes/header.php';
+require_once 'includes/header.php';
 
-  session_start();
+session_start();
 
-  if (isset($_SESSION['username'])) {
-    require_once 'logged_in.php';
-  } else {
-    require_once 'logged_out.php';
-  }
-?>
+if (isset($_SESSION['username'])) {
+
+  require_once 'logged_in.php';
+} else {
+  require_once 'logged_out.php';
+}
