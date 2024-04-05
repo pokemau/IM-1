@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2024 at 04:11 AM
+-- Generation Time: Apr 05, 2024 at 04:14 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -40,7 +40,9 @@ CREATE TABLE `tbluseraccount` (
 --
 
 INSERT INTO `tbluseraccount` (`acctid`, `emailadd`, `username`, `password`, `usertype`) VALUES
-(8, 'mau@gmail.com', 'mau', '$2y$10$9KAofBiuvtRy4Ef7KdbTYuQ/g9sYTXnOnaitce2IGZwYn7R3lDqCO', 'admin');
+(8, 'mau@gmail.com', 'mau', '$2y$10$9KAofBiuvtRy4Ef7KdbTYuQ/g9sYTXnOnaitce2IGZwYn7R3lDqCO', 'admin'),
+(11, 'markbaring@gg.com', 'mark', '$2y$10$Q78AdLfFAFyXIlgLN..At.rBAlDScCw7hmJk8qXjV.I/e9ZGVOkfu', 'user'),
+(12, 'rentil@emawil', 'markkkk', '$2y$10$70frcGApH62W76zUJt1Cb.OoWGmD.H4Ynw0NgQ.Fze61TYr8d7c2O', 'user');
 
 -- --------------------------------------------------------
 
@@ -59,7 +61,9 @@ CREATE TABLE `tbluserprofile` (
 --
 
 INSERT INTO `tbluserprofile` (`userid`, `birthday`, `displayname`) VALUES
-(9, '2024-04-05', 'mau');
+(9, '2024-04-05', 'mau'),
+(12, '2024-04-17', 'makr brrinnggg'),
+(13, '2024-01-09', 'markar');
 
 --
 -- Indexes for dumped tables
@@ -85,13 +89,13 @@ ALTER TABLE `tbluserprofile`
 -- AUTO_INCREMENT for table `tbluseraccount`
 --
 ALTER TABLE `tbluseraccount`
-  MODIFY `acctid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `acctid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbluserprofile`
 --
 ALTER TABLE `tbluserprofile`
-  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
