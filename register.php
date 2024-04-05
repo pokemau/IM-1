@@ -9,7 +9,7 @@ require_once 'includes/header.php';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accord Register Page</title>
+  <title>Register</title>
   <link rel="stylesheet" href="css/register.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/message.css" />
@@ -17,18 +17,6 @@ require_once 'includes/header.php';
 </head>
 
 <body>
-
-
-  <!-- <?php $fname = $_POST['txtfirstname'];
-        $email = $_POST['txtemail'];
-        $displayName = $_POST['txtdisplayname'];
-        $uname = $_POST['txtusername'];
-        $bday = $_POST['txtbirthday'];
-
-        //for tbluseraccount
-        $pword = $_POST['txtpassword'];
-
-        ?> -->
 
   <div id="registerForm">
     <form method="post">
@@ -93,8 +81,7 @@ if (isset($_POST['btnRegister'])) {
   }
 }
 
-function showMessage($message)
-{
+function showMessage($message) {
 
   echo "
       <div id='message-box'>

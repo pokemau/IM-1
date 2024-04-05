@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2024 at 03:01 AM
+-- Generation Time: Apr 05, 2024 at 04:11 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbtañecaf2`
+-- Database: `dbtanecaf2`
 --
 
 -- --------------------------------------------------------
@@ -31,9 +31,16 @@ CREATE TABLE `tbluseraccount` (
   `acctid` int(11) NOT NULL,
   `emailadd` varchar(30) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` int(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `usertype` varchar(10) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbluseraccount`
+--
+
+INSERT INTO `tbluseraccount` (`acctid`, `emailadd`, `username`, `password`, `usertype`) VALUES
+(8, 'mau@gmail.com', 'mau', '$2y$10$9KAofBiuvtRy4Ef7KdbTYuQ/g9sYTXnOnaitce2IGZwYn7R3lDqCO', 'admin');
 
 -- --------------------------------------------------------
 
@@ -46,6 +53,13 @@ CREATE TABLE `tbluserprofile` (
   `birthday` date NOT NULL DEFAULT current_timestamp(),
   `displayname` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbluserprofile`
+--
+
+INSERT INTO `tbluserprofile` (`userid`, `birthday`, `displayname`) VALUES
+(9, '2024-04-05', 'mau');
 
 --
 -- Indexes for dumped tables
@@ -71,13 +85,13 @@ ALTER TABLE `tbluserprofile`
 -- AUTO_INCREMENT for table `tbluseraccount`
 --
 ALTER TABLE `tbluseraccount`
-  MODIFY `acctid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `acctid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbluserprofile`
 --
 ALTER TABLE `tbluserprofile`
-  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `userid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

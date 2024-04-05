@@ -63,7 +63,7 @@ if (isset($_POST['btnLogin'])) {
 
   $result   = mysqli_query($connection, $QUERY);
   $count    = mysqli_num_rows($result);
-  $row = mysqli_fetch_array($result);
+  $row      = mysqli_fetch_array($result);
 
   if ($count == 0) {
     showMessage("Username does not exist.");
@@ -75,24 +75,22 @@ if (isset($_POST['btnLogin'])) {
   }
 }
 
-function showMessage($message)
-{
-
+function showMessage($message) {
   echo "
-      <div id='message-box'>
-        <p>$message</p>
-      </div>
+    <div id='message-box'>
+      <p>$message</p>
+    </div>
     ";
 
   echo "
-      <script>
-        setTimeout(function() {
-          var messageBox = document.getElementById('message-box');
-          if (messageBox) {
-            messageBox.parentNode.removeChild(messageBox);
-          }
-        }, 3000);
-      </script>
+    <script>
+      setTimeout(function() {
+        var messageBox = document.getElementById('message-box');
+        if (messageBox) {
+          messageBox.parentNode.removeChild(messageBox);
+        }
+      }, 3000);
+    </script>
     ";
 }
 
